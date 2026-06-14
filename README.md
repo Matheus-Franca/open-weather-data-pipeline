@@ -27,7 +27,7 @@ A infraestrutura foi construída utilizando o conceito de **Infrastructure as Co
 
 1. **Extract:** O Airflow aciona as DAGs de extração que se conectam à API da OpenWeather. Os dados brutos (JSON) são ingeridos e salvos no MinIO, particionados por ano/mes/dia.
 2. **Transform:** Scripts em Python/Pandas acessam o Data Lake, achatam os dicionários, e aplicam regras de negócios (como conversão de Kelvin para Celsius e ajustes de fuso horário UTC para GMT-3) e preparam os dados para o modelo relacional. É possível utilizar parâmetros diretamente na API para formatar as informações, porém por escolha própria, resolvi fazer o tratamento durante o processo de transformação.
-3. **Load:** Utilizando o PostgresHook, os dados são carregados no PostgreSQL, alimentando as tabelas de dimensão (`dim_tempo`, `dim_localidade`, `dim_condicao`) e as tabelas fato (`fato_clima_atual`, `fato_previsao`).
+3. **Load:** Utilizando o PostgresHook, os dados são carregados no PostgreSQL, alimentando as tabelas de dimensão (`dim_tempo`, `dim_localidade`, `dim_condicao`) e as tabelas fato (`fato_clima_atual`, `fato_previsao`) o diagrama está disponível no diretório Diagramas.
 4. **Visualização:** O Streamlit se conecta diretamente ao Data Warehouse realizando consultas SQL para apresentar os dados na tela, aplicando filtros de interface para exibir previsões a cada 6 horas e simplificar a probabilidade de chuva.
 
 ## Como Executar o Projeto Localmente
