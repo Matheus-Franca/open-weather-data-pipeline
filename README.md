@@ -8,7 +8,7 @@
 <br>
 <br>
 
-#### O sistema coleta automaticamete a cada hora dados de uma API externa, organiza-os em um Data Lake, modela os dados e faz a carga em um Data Warehouse modelado baseado no esquema dimensional Star Schema, e disponibiliza as informações em uma aplicação Web.
+#### O objetivo do projeto foi desenvolver uma aplicação automatizada para extração e processamento de dados oriundos de uma API web. O sistema coleta automaticamete a cada hora dados de uma API externa, organiza-os em um Data Lake, modela os dados e faz a carga em um Data Warehouse modelado baseado no esquema dimensional Star Schema, e disponibiliza as informações em uma aplicação Web.
 
 ## Arquitetura e Tecnologias
 
