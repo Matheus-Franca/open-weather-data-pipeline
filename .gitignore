@@ -1,0 +1,31 @@
+# Environment variables (Sensitive data)
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# Airflow/Logs
+logs/
+*.log
+
+# Database & Storage (Local data volumes)
+postgres_dw_volumes/
+minio_data/
+
+# Docker
+.docker/
+
+# IDEs and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
